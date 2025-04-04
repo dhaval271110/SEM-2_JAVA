@@ -12,7 +12,9 @@ class MyThread extends Thread{
 		this.arr1=arr1;
 	}
 	public void run(){
-		arr1[]
+		for(int i=0;i<arr1.length;i++){
+			sum +=arr[i];
+			System.out.println("Sum is: "+sum);
 	}
 }
 public class lab_11_6{
@@ -30,7 +32,7 @@ public class lab_11_6{
 			}
 		}
 		for(int k=0;k<m;k++){
-			MyThread mt=new MyThread(arr[i]);
+			MyThread mt=new MyThread(arr[i],i);
 			mt.start();
 		}
 	}
